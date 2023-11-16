@@ -1,6 +1,4 @@
 # Importação da biblioteca
-import time
-
 import pymongo
 from time import sleep
 # Conexão com o bando de dados(Sevidor, local)
@@ -22,6 +20,7 @@ while indice <= quantidade:
     telefone = input("Diga o telefone do contado: ")
     email = input("Diga o email do contado: ")
     contato = dict(nome=nome, sobrenome=sobrenome, telefone=telefone, email=email)
+    sleep(0.5)
     print(f"Esses documentos {contato} serão inseridos no MongoDB ")
     confirmar = input("Digite S(Sim) ou N(Não) para confirma o registro do contato: ")
 
@@ -30,6 +29,8 @@ while indice <= quantidade:
 
     if confirmar in ('S', 's'):
         contatos.insert_one(contato)
+        sleep(1)
+        print(f"Dados Inseridos foram {contato}")
         indice += 1
 
     elif confirmar in ('N', 'n'):
