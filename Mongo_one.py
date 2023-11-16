@@ -15,6 +15,7 @@ indice = 1
 quantidade = int(input("Quantos contatos vai inserir: "))
 
 while indice <= quantidade:
+    sleep(0.5)
     nome = input("Diga o nome do contado: ")
     sobrenome = input("Diga o sobrenome do contado: ")
     telefone = input("Diga o telefone do contado: ")
